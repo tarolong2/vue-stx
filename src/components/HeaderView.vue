@@ -36,7 +36,8 @@ export default {
   setup() {
     const store = useStore();
     const gnbData = computed( () => store.getters.getGnbData );
-       
+    // vuex의 store 의 action 요청한다.
+    store.dispatch('fetchGnb');
 
     // vue 에서 화면에 html 등록시 실행
     onMounted( () => { 
