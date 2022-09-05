@@ -29,7 +29,7 @@
 
 <script>
 import $ from 'jquery';
-import { computed, onMounted } from 'vue';
+import { computed, onUpdated } from 'vue';
 import { useStore } from 'vuex'
 
 export default {
@@ -40,7 +40,7 @@ export default {
     store.dispatch('fetchGnb');
 
     // vue 에서 화면에 html 등록시 실행
-    onMounted( () => { 
+    onUpdated( () => { 
        // .header를 저장한다.
       let header = $('.header');
       let gnb = $('.gnb');
