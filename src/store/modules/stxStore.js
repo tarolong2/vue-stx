@@ -9,7 +9,7 @@ const actions = {
   // gnb.json 데이터를 axios 로 받아온다.
   // mutation: 즉, state 를 업데이트 하기 위해 필요한 메서드(commit)
   fetchGnb({commit}) {
-    axios.get('/data/gnb.json')
+    axios.get('./data/gnb.json')
     .then(response => {
       // console.log("axios", response)
       // commit('mutaion 메서드 이름', 전달할 값); 
@@ -20,7 +20,7 @@ const actions = {
 
   fetchNews({commit}) {
     // news.json 을 axio 로 호출함.
-    axios.get('/data/news.json')        
+    axios.get('./data/news.json')        
     .then(response => {
       // console.log(response)
       // mutation 으로 자료를 전송한다. commit 필요
@@ -32,7 +32,7 @@ const actions = {
   },
 
   fetchNotice({commit}) {
-    axios.get('/data/notice.json')
+    axios.get('./data/notice.json')
     .then(response => {
       // console.log(response)
       commit('UPDATE_NOTICE', response.data);
